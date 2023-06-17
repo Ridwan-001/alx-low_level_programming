@@ -21,3 +21,4 @@ putchar(alp[i]);
 putchar('\n');
 return (0);
 }
+%s/\s\+$//e
