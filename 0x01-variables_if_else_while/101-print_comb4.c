@@ -1,25 +1,20 @@
 #include <stdio.h>
 
 /**
-* main - Prints numbers between 00 to 99.
-*
-* Return: Always 0 (Success)
-*/
+ * main - Prints numbers between 012 to 789.
+ *
+ * Return: Always 0 (Success).
+ */
 
 int main(void)
 
 {
-int i, e, g, h, op1, op2;
+int i, e, g;
 
-i = e = g = h = 48;
-while (h < 58)
-
-{
-g = 48;
-while (g < 58)
-
-{
+i = 48;
 e = 48;
+g = 48;
+
 while (e < 58)
 
 {
@@ -27,32 +22,33 @@ i = 48;
 while (i < 58)
 
 {
-op1 = (h * 10) + g;
-op2 = (e * 10) + i;
-if (op1 < op2)
+g = 48;
+while (g < 58)
 
 {
-putchar(h);
-putchar(g);
-putchar(' ');
+if (e != i && e != g && i != g && e < i && i < g)
+
+{
 putchar(e);
 putchar(i);
-if (h == 57 && g == 56 && e == 57 && i == 57)
+putchar(g);
+if (i == 56 && e == 55 && g == 57)
+
+{
 break;
+}
+
 putchar(',');
 putchar(' ');
+}
+
+g++;
 }
 
 i++;
 }
 
 e++;
-}
-
-g++;
-}
-
-h++;
 }
 
 putchar('\n');
