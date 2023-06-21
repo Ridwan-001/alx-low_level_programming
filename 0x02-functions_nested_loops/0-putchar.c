@@ -1,30 +1,24 @@
 #include "main.h"
-
 /**
-* jack_bauer -prints every minute of the day
-*
-* Return: Always 0.
-*/
+ * main - Prints _putchar as a message.
+ * Description: It prints the characters _putchar.
+ *
+ * Return: Always 0 (Success)
+ */
 
-void jack_bauer(void)
-
-{
-int a;
-int b;
-
-for (a = 0; a <= 23; a++)
+int main(void)
 
 {
-for (b = 0; b <= 59; b++)
+int str[] = {95, 112, 117, 116, 99, 104, 97, 114};
+int count, sz;
+
+sz = sizeof(str) / sizeof(int);
+for (count = 0; count < sz; count++)
 
 {
-_putchar (a / 10 + '0');
-_putchar (a % 10 + '0');
-_putchar (':');
-_putchar (b / 10 + '0');
-_putchar (b % 10 + '0');
-_putchar ('\n');
+_putchar(str[count]);
 }
 
-}
+_putchar('\n');
+return (0);
 }
